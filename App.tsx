@@ -12,8 +12,11 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginScreen from './ios/src/views/LoginScreen';
 import RegistrationScreen from './ios/src/views/RegistrationScreen';
 import HomeScreen from './ios/src/views/HomeScreen';
+import NewNess from './ios/src/views/NewNess';
+import RecordHours from './ios/src/views/RecordHours';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Loader from "./ios/src/components/Loader";
+import ConsultHours from "./ios/src/views/ConsultHours";
 
 const Stack = createNativeStackNavigator();
 
@@ -37,12 +40,10 @@ const App = () => {
       } else {
         setInitialRouteName('RegistrationScreen');
       }
-
     } catch (error) {
       setInitialRouteName('RegistrationScreen');
 
     }
-
   };
 
   return (
@@ -59,6 +60,9 @@ const App = () => {
           />
           <Stack.Screen name="RegistrationScreen" component={RegistrationScreen} />
           <Stack.Screen name="HomeScreen" component={HomeScreen} />
+          <Stack.Screen name="ConsultHours" component={ConsultHours} />
+          <Stack.Screen name="RecordHours" component={RecordHours} />
+          <Stack.Screen name="NewNess" component={NewNess} />
 
         </Stack.Navigator></>)}
     </NavigationContainer>

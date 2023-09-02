@@ -1,26 +1,18 @@
 import React from "react";
-
 import {
-    SafeAreaView,
-    ScrollView,
-    StatusBar,
-    StyleSheet,
-    Text,
-    TextInput,
-    useColorScheme,
-    View,
-    Pressable,
-    Modal,
-    Keyboard,
-    Alert
+  SafeAreaView,
+  ScrollView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  View,
+  Keyboard,
 } from 'react-native';
-
 import Input from '../components/Input';
 import Button from "../components/Button";
 import RegistrationScreen from '../views/RegistrationScreen';
-import Loader from "../components/Loader";
 import AsyncStorage from '@react-native-async-storage/async-storage'
-import HomeScreen from './HomeScreen';
+import Loader from "../components/Loader";
 
 const LoginScreen = ({ navigation }) => {
     const [inputs, setInputs] = React.useState({
@@ -94,7 +86,7 @@ const LoginScreen = ({ navigation }) => {
             <Text style={style.subtitle}>
                 Enter your details to login
             </Text>
-            <View style={style.containerLogin}>
+            <View style={style.innerContainer}>
                 <Input
                     placeholder="Insert your login"
                     placeholderTextColor="#38A3A5"
@@ -158,7 +150,7 @@ const style = StyleSheet.create({
         fontWeight: 'bold',
         marginVertical: 10
     },
-    containerLogin: {
+    innerContainer: {
         marginVertical: 20,
         padding: 15,
         borderRadius: 10
